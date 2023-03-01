@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(array('prefix' => 'v1'), function(){
+    Route::any('users', '\App\Http\Controllers\API\UserController@index');
+});

@@ -30,6 +30,8 @@ class User extends Authenticatable
 
     public $incrementing = false;
 
+    public $timestamps = false;
+
     protected static function boot()
     {
         parent::boot();

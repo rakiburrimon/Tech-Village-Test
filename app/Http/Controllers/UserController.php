@@ -12,7 +12,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $data['users'] = User::paginate('30');
+
+        return view('users.index', $data);
     }
 
     /**
